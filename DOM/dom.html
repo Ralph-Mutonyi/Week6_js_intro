@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body>
+    <p id="html_dom"></p>
+    <p id="myText">This is an example of a paragraph</p>
+    <button id="btnchange">change Text</button>
+</body>
+<script>
+    // To access the html paragraph we ue the object method below
+
+    document.getElementById("html_dom").innerHTML = "Good morning, Welcome to today's class!";
+
+    const button = document.querySelector('#btnchange');
+
+    function newText(event){
+        console.log(event);
+        const p = document.querySelector('#myText');
+        p.innerText = "This paragraph has been changed!";
+    }
+
+    // the event listener takes two arguements ( event, functiontobeexecuted)
+    button.addEventListener('click', newText);
+</script>
+</html>
