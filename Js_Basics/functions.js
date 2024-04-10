@@ -157,10 +157,5 @@ PrintArgs(1, 2, 3);
 
 */
 
-// example
 
-const Plus2 = (num) => {
-    return num +2;
-}
 
-const plus2 = (num) => num+2;

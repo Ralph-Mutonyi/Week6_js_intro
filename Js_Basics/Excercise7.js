@@ -23,3 +23,5 @@ const person = {
 
 
 person.greeting();
+
+
