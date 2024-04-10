@@ -9,6 +9,7 @@
     <p id="html_dom"></p>
     <p id="myText">This is an example of a paragraph</p>
     <button id="btnchange">change Text</button>
+    <button onclick="clickButton()">Click me !</button>
 </body>
 <script>
     // To access the html paragraph we ue the object method below
@@ -23,7 +24,37 @@
         p.innerText = "This paragraph has been changed!";
     }
 
-    // the event listener takes two arguements ( event, functiontobeexecuted)
+    // the event listener takes two params. ( event, functiontobeexecuted)
     button.addEventListener('click', newText);
+
+    document.addEventListener(
+        'keydown', (event) => {
+            console.log('a key has been pressed.');
+            console.log(event.key);
+        }
+    );
+
+    document.addEventListener('keyup', (event) => {
+        console.log('A key has been released.');
+    })
+
+    // capturing events on mouse actions - hovering, clicking etc. 
+
+    document.addEventListener('mousedown', (event) => {
+        console.log('The mouse button has been pressed.');
+    });
+
+    document.addEventListener('mouseup', (event) => {
+        console.log('The mouse button has been released.');
+    });
+
+    document.addEventListener('mouseover', (event) => {
+        console.log('The mouse button has moved.');
+    });
+
+    function clickButton(){
+        alert('Button has been clicked');
+    }
+
 </script>
 </html>
