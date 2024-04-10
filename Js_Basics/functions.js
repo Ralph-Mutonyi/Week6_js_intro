@@ -89,7 +89,7 @@ function greet07(){
 greet07();
 
 
-// Restp Parameter
+// Rest Parameter
 
 // Any parameter that can accept any o. of data as its arguements.
 // The arguements will be stored as an array
@@ -135,7 +135,32 @@ const plusTwo = (num) => num+2;
 
 // multilines -> where curly braces can be used. 
 
-const greetings= () =>{
+const greetings02= () =>{
     console.log("hello world")
 }
 
+// Arrow function doesnt have object that stores all arguements passed into the function
+
+const PrintArgs = (...arguements) => {
+    console.log(arguements[2]);
+};
+
+PrintArgs(1, 2, 3);
+
+// Converting a normal function --> arrow function
+
+/* 
+
+1. replace the function keyword with the variable let ot const keyword
+2. add (=) symbol after the function name and before round brackets
+3. add the (=>) symbol after the round brackets
+
+*/
+
+// example
+
+const Plus2 = (num) => {
+    return num +2;
+}
+
+const plus2 = (num) => num+2;
