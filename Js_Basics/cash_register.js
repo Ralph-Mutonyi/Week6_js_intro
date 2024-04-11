@@ -14,7 +14,7 @@ const cashRegister = {
     // object method to add items to the shopping cart
 
     addItem: function (itemName){
-        if (this.itemsForSale[itemName]){
+        if (this.availableItems[itemName]){
            //move to shopping Cart 
            this.shoppingCart.push(itemName);
            console.log(`${itemName} added to the cart.`)
@@ -27,13 +27,13 @@ const cashRegister = {
     calculateTotalPrice: function(){
         let totalPrice = 0;
         this.shoppingCart.forEach(item => {
-            totalPrice += this.itemsForSale[item];
+            totalPrice += this.availableItems[item];
         });
 
         // apply discount if total price is > 400.
         if(totalPrice > 400){
             console.log("A 10% discount has ben applied");
-            totalPrice *= 0.9; // apply 105 discount. 
+            totalPrice *= 0.9; // apply 10% discount. 
         }
         
         return totalPrice;
@@ -64,5 +64,5 @@ console.log(`Total price: $${cashRegister.calculateTotalPrice().toFixed(2)}`);
 
 // making a payment
 
-cashRegister.pay(700); // adjust the amount for different scenarios.
+cashRegister.pay(400); // adjust the amount for different scenarios.
 
