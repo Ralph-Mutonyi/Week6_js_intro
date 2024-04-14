@@ -1,13 +1,8 @@
-let conf = confirm("You must be atleast 18 years old to view this content");
-let name = prompt("What is your name", "");
-let age = prompt("What is your age?", "");
+// && 
+ let hour = 12;
+ let minute = 30;
 
-if (conf === true){
-    if (age >= 18){
-        alert(`Welcome ${name}`)
-    }else{
-        alert(`Sorry ${name}, you must be 18 years old to view this content`);
-    }
-} else{
-    alert("You cant Open this page");
-}
+ if ( hour == 12 && minute == 30){
+    alert(`The time is ${hour}:${minute}`);
+ }
+ 
