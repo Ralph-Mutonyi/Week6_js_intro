@@ -1,1 +1,7 @@
-height = height ?? 100;
+function doNothing(){
+   return;
+
+}
+
+alert(doNothing() === undefined);
+
