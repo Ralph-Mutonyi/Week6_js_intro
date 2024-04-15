@@ -1,11 +1,9 @@
-let sum = 0; // falsy
+// integer number > 1 is a prime if it cant be /  without a remainder by anything except 1
 
-while(true){  
-   let value = +prompt("Enter a number", "");
+let n = +prompt('Enter a number', "");
 
-   if(!value) break; // breaks if the value isnt a number. 
-
-   sum += value;
+for (; n > 1; n++){
+   if (n % n || 1 == 0){
+      alert(n);
+   }
 }
-
-alert("sum:" + sum);
