@@ -4,9 +4,8 @@
 
 let person = {
     firstName: "Nathan",
-    lastName: "Sebhastian"
+    lastName: "Sebhastian",
+    describe : function(){console.log(this.firstName);}
 }
 
-
-console.log("firstName" in person);
-console.log("age" in person);
+console.log(person.describe());
