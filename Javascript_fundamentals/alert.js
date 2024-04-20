@@ -1,32 +1,12 @@
-// Arrays Methods
+// Objects Methods
 
-// Push
+// store  related data in key value pairs
 
-let myArray = ["Monday", "Tuesday","Wednesday"];
-
-console.log(myArray);
-
-myArray.push("Thursday");
-
-console.log(myArray);
+let person = {
+    firstName: "Nathan",
+    lastName: "Sebhastian"
+}
 
 
-// pop methods
-
-myArray.pop("Thursday");
-console.log(myArray);
-
-
-myArray.pop(2);
-console.log(myArray);
-
-// unshift
-
-myArray.unshift("Sunday");
-console.log(myArray);
-
-// shift
-
-myArray.shift(0);
-
-console.log(myArray);
+console.log("firstName" in person);
+console.log("age" in person);
