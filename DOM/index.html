@@ -5,7 +5,17 @@
     </head>
     <body>
         <p id ="myParagraph">This is an example of a paragraph</p>
-        <button id = "changeText">Change Text</button>
+        <button id = "myBtn">Click Me!</button>
     </body>
-    <script src="index.js"></script>
+    <script>
+        
+        const myBtn = document.querySelector('#myBtn');
+
+        myBtn.onclick = handleClick;
+
+        function handleClick(event) {
+            alert("The button is Clicked");
+        }
+
+    </script>
 </html>
